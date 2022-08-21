@@ -8,7 +8,7 @@ document.getElementById("cosa").addEventListener("click", function () {
     const alert = document.getElementById("warning")
     let email = document.getElementById("email").value
     let contra = document.getElementById("contra").value
-    let nocumpleCon = false;
+    let cumpleCon = true;
     let warning = ""
     
     alert.innerHTML = ""
@@ -16,24 +16,26 @@ document.getElementById("cosa").addEventListener("click", function () {
 
         
         warning += `Ingrese E-mail <br>`;
-        nocumpleCon = true;
+        cumpleCon = false;
         
         
     }
 
     if (contra == "" ) {
         
-        nocumpleCon = true;
+        cumpleCon = false;
         warning += `Ingrese Contraseña `
     }
 
-    if (nocumpleCon){
+    if (cumpleCon){
+        window.location.replace("showroom.html")
         
-        alert.innerHTML= warning
+        
         
     }
     else {
-        window.location.replace("showroom.html")
+        
+        alert.innerHTML= warning
     }
      
       
@@ -43,5 +45,6 @@ document.getElementById("cosa").addEventListener("click", function () {
     
 
 })
+
     
 })
