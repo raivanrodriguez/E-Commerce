@@ -3,7 +3,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-document.getElementById("btn").addEventListener("click", function () {
+document.getElementById("botn").addEventListener("click", function () {
 
    
     let email = document.getElementById("email").value
