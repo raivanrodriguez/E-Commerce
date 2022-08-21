@@ -10,7 +10,7 @@ fetch(autos_url)
    for (let leer of datos.products){
     
       let row= `
-      <div onclick="setCatID(${leer.id})" class="list-group-item list-group-item-action cursor-active">
+      <div class="list-group-item list-group-item-action cursor-active">
   
         <div class="row">
            <div class="col-3">
@@ -27,20 +27,8 @@ fetch(autos_url)
         </div>
       </div>
 
-     
-     
-     
-
-
-
-
-
-
         `
 
-   
-     
-    
     document.getElementById("nomaut").innerHTML += row;
 
 
