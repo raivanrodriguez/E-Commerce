@@ -3,13 +3,14 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-document.getElementById("cosa").addEventListener("click", function () {
+document.getElementById("btn").addEventListener("click", function () {
 
-    const alert = document.getElementById("warning")
+   
     let email = document.getElementById("email").value
     let contra = document.getElementById("contra").value
-    let cumpleCon = true;
+    let alert = document.getElementById("warning")
     let warning = ""
+    let cumpleCon = true;
     
     alert.innerHTML = ""
     if (email == "" ) {
