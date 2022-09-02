@@ -46,6 +46,24 @@ document.getElementById("cosa").addEventListener("click", function () {
     
 
 })
+document.getElementById("cosa").addEventListener("click", function () {
+
+let mis_datos = {
+    
+    dato1: document.getElementById("email").value
+};
+
+let mis_datos_json = JSON.stringify(mis_datos);
+
+localStorage.setItem("mis_datos", mis_datos_json);
+
+
+})
+
+
+
+
+
 
     
 })
