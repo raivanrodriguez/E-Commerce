@@ -3,6 +3,7 @@ const items_URL = "https://japceibal.github.io/emercado-api/cats_products/" + lo
 let items = [];
 let min = undefined;
 let max = undefined;
+let search = undefined;
 
 
 function mostrarItems(itemsr) {
@@ -11,9 +12,9 @@ function mostrarItems(itemsr) {
  for (const item of itemsr) {
   item.cost = parseInt(item.cost);
   if ((min == undefined && max == undefined) || (item.cost >= min && item.cost <= max  )|| 
-  (item.cost >= min && max == undefined )|| (item.cost <= max && min == undefined )){
-    console.log(typeof max);
-    console.log(typeof item.cost)
+  (item.cost >= min && max == undefined )|| (item.cost <= max && min == undefined ))
+   if (search == undefined || search == "" || item.name.toLowerCase().includes(search.toLowerCase()) || 
+   item.description.toLowerCase().includes(search.toLowerCase())) {
   let contenido = `
   <div class="list-group-item list-group-item-action cursor-active">
       <div class="row">
@@ -59,8 +60,17 @@ document.getElementById("nomaut").innerHTML += contenido
       alert("algo salio mal" + result.data.products);
     }
   })
+ 
 
 
+
+ })
+
+ document.getElementById("busqueda").addEventListener("input" , function (){
+
+search = document.getElementById("busqueda").value;
+
+mostrarItems(items)
 
  })
 
@@ -88,3 +98,30 @@ document.getElementById("nomaut").innerHTML += contenido
   document.getElementById("rangeMax").value = "";
   mostrarItems(items);
  })
+
+ document.getElementById("pMin").addEventListener("click", function() {
+  items.sort (function (a,b) {
+    return parseInt(b.cost) - parseInt(a.cost)
+  })
+  mostrarItems(items);
+})
+
+document.getElementById("pMax").addEventListener("click", function() {
+  items.sort (function (a,b) {
+    return parseInt(a.cost) - parseInt(b.cost)
+  })
+  mostrarItems(items);
+})
+document.getElementById("Rele").addEventListener("click", function() {
+  items.sort (function (a,b) {
+    return parseInt(b.soldCount) - parseInt(a.soldCount)
+  })
+  mostrarItems(items);
+})
+
+
+
+
+
+  
+         

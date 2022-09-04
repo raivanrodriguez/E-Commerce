@@ -10,43 +10,42 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <style>
+    .nom{
+      color: antiquewhite;
+      margin: 9px;
+    }
+  </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav w-100 justify-content-between">
-          <li class="nav-item">
-            <a class="nav-link" href="showroom.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="categories.html">Categorías</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="sell.html">Vender</a>
-          </li>
-          <li class="nav-item">
-          </li>
-        </ul>
-      </div>
+  <div id="barra">
+
+  </div><br>
+  <div class="col-lg-2 offset-lg-9 col-md-12 mb-1 container">
+    <input class="form-control" type="search"  id="busqueda" placeholder="Buscar">
+    
     </div>
-  </nav>
+   
+   <div>
   <main class="pb-5 container">
+    
     <div class="container">
+      
       <div class="text-center" >
         <br>
         <h1 class="heading">Productos</h1>
         <h5>Veras aqui todos los productos de la categoría Autos</h5>
         <br>
         <br>
-       <div>
+        
+       
+        
         <div class="col text-end">
+          
+        
           <div class="btn-group btn-group-toggle mb-4" data-bs-toggle="buttons">
+            
            
             <input type="radio" class="btn-check" name="options" id="pMin" checked>
             <label class="btn btn-light" for="pMin"><i class="fas fa-sort-amount-down mr-1">$</i></label>
@@ -54,11 +53,20 @@
             <label class="btn btn-light" for="pMax"><i class="fas fa-sort-amount-up mr-1">$</i></label>
             <input type="radio" class="btn-check" name="options" id="Rele" checked>
             <label class="btn btn-light" for="Rele"><i class="fas fa-sort-amount-down mr-1">Relevancia</i></label>
+            
+          
+           
+            
+          
           </div>
           </div>
+         
 
           <div class="col-lg-6 offset-lg-6 col-md-12 mb-1 container">
+            
             <div class="row container p-0 m-0">
+              
+          
               <div class="col">
                 <p class="font-weight-normal text-end my-2">Precio</p>
               </div>
@@ -71,8 +79,9 @@
               <div class="col-3 p-0">
                 <div class="btn-group" role="group">
                   <button class="btn btn-light btn-block" id="Filtrar">Filtrar</button>
-                  <button class="btn btn-link btn-sm" id="Limpiar">Limpiar</button>
+                  <button class="btn btn-link btn-sm" id="Limpiar">Limpiar</button><br>
                 </div>
+              
               </div>
        </div>
       </div>
@@ -108,6 +117,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/products.js"></script>
+  <script src="js/Mostrar.js"></script>
 </body>
 
 </html>

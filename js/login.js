@@ -48,14 +48,14 @@ document.getElementById("cosa").addEventListener("click", function () {
 })
 document.getElementById("cosa").addEventListener("click", function () {
 
-let mis_datos = {
+let datos_ingresados = {
     
     dato1: document.getElementById("email").value
 };
 
-let mis_datos_json = JSON.stringify(mis_datos);
+let dato_guardado = JSON.stringify(datos_ingresados);
 
-localStorage.setItem("mis_datos", mis_datos_json);
+localStorage.setItem("datos_ingresados", dato_guardado);
 
 
 })
