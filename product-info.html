@@ -10,38 +10,71 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .nom{
+      color: antiquewhite;
+      margin: 9px;
+    }
+  </style>
+
+ 
+ 
+ 
+
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav w-100 justify-content-between">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="categories.html">Categorías</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="sell.html">Vender</a>
-          </li>
-          <li class="nav-item">
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div id="barra">
+
+  </div><br>
   <main>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
+      
+      
+      <div id="infopro" class="pad"></div><br>
+      
     </div>
+    <br>
+    <br>
+    <div class="container">
+      <h3 class="text-center"> Comentarios </h3>
+      <br>
+      <div class="d-flex justify-content-center">
+        
+         <div class="col-7">
+            <div id="coment"></div>
+           <div>
+      </div>
+      <div  id="a"></div>
+      <div>
+        <br>
+        <div class="row justify-content-md-center">
+        <div class="col-md-8 order-md-1">
+          <h4 class="mb-3">Comentar</h4>
+        <div class="row">
+        <div class="col-md-12 mb-3">
+          <label for="comentar">Dejanos tu opinión</label>
+          <textarea name="comentar" class="form-control" id="comentar"></textarea>
+        </div>
+        <div class="col-md-4 mb-2">
+          <label for="productCategory">Tu puntuación</label>
+          <select name="estrella" class="custom-select form-select d-block w-100" id="estrella">
+            <option value="">1</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            
+          </select>
+          <div class="invalid-feedback">
+            Por favor ingresa una categoría válida.
+          </div>
+        </div></div>
+        <button class="btn btn-primary btn-lg" type="button" id="agrcom">Enviar</button>
+    </div>
+  
   </main>
   <footer class="text-muted">
     <div class="container">
@@ -64,6 +97,8 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
+  <script src="js/Mostrar.js"></script>
+ 
 </body>
 
 </html>

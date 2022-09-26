@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
             <a class="nav-link active" href="showroom.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="categories.html">Categorías</a>
+            <a class="nav-link active" href="categories.html">Categorías</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="sell.html">Vender</a>
+            <a class="nav-link active" href="sell.html">Vender</a>
             
           </li>
           

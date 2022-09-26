@@ -3,7 +3,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-document.getElementById("cosa").addEventListener("click", function () {
+document.getElementById("ingresar").addEventListener("click", function () {
 
    
     let email = document.getElementById("email").value
@@ -46,7 +46,7 @@ document.getElementById("cosa").addEventListener("click", function () {
     
 
 })
-document.getElementById("cosa").addEventListener("click", function () {
+document.getElementById("ingresar").addEventListener("click", function () {
 
 let datos_ingresados = {
     
