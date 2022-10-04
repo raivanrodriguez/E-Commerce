@@ -41,10 +41,25 @@ let parseName = JSON.parse(localStorage.getItem("comnew"));
 // el dato0 sera la variable dif por lo tanto sera igual al id del producto y quiero usarlo como indice
 
 document.getElementById("agrcom").addEventListener("click", function () {
+
+ let now = new Date();
+ let segu = `0${now.getSeconds()}`
+ 
+ let seg = segu.slice(-2)
+ console.log(seg)
+ let minu = `0${now.getMinutes()}`
+ let min = minu.slice(-2)
+ console.log(minu)
+ console.log(min)
+ let hora = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDay()}`;
+     hora +=  `${now.getHours()}:${min}:${seg}`
+
+   console.log(hora)
   let newcoment = { dato0 : dif, 
                     dato1 : document.getElementById("comentar").value,
                     dato2 : document.getElementById("estrella").value,
-                    dato3 : user.dato1
+                    dato3 : user.dato1,
+                    dato4 : hora
                    
   
   };
@@ -80,8 +95,9 @@ function showList() {
               <div class="col">
                   <div class="d-flex w-100 justify-content-between">
                       <p class="my-0"><strong>  ${ncom.dato3}</strong> - ${estrella(ncom.dato2)}
+
                      </p>
-                       <small class="text-muted"></small>   
+                       <small class="text-muted">${ncom.dato4}</small>   
                   </div>
                   <p class="mb-1">${ncom.dato1}</p>
               </div>
