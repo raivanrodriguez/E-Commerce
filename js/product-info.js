@@ -4,6 +4,8 @@ const PRODUCTCOMMENTS_URL = "https://japceibal.github.io/emercado-api/products_c
 let  infoit = [];
 let coment = [];
 let nuevoCom = [];
+let carrito = [];
+
 //aqui creo un parrafo con id variable en mi html, lo que hago es tomar del localstorage el id que guardo al cargar la pagina y guardarlo en una variable
 //luego en un parrafo con un id "a"  genero un nuevo div en el cual va a ir contenido un id que es la variable
 //de esta forma en cada producto voy a tener un parrafo con un id que va a coincidir con el id del producto
@@ -16,6 +18,12 @@ let dato_guardado = localStorage.getItem("datos_ingresados");
  user = JSON.parse(dato_guardado);
  console.log(user.dato1)
 
+ 
+ let parsecar = JSON.parse(localStorage.getItem("datos_cart"));
+ if (parsecar != null) {
+     carrito = JSON.parse(localStorage.getItem("datos_cart"));
+     }
+     
 
 function setCatID(id) {
 
@@ -110,14 +118,20 @@ function showList() {
   }
 }
 
+  
+
 function mostrarInfo(infoit) {
     
     console.log(infoit.relatedProducts[0].image)
 
 let = contenido = `
 
-<h2>${infoit.name}</h2><br>
+<h2>${infoit.name}</h2> 
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+<button class="btn btn-success me-md-2" type="button" id="btnDir" >Comprar</button>
+</div><br>
 <p class="mb-1">${infoit.description}</p><br>
+
 <hr>
 <p ><strong>Precio</strong></p>
 <p class="mb-1">${infoit.currency} ${infoit.cost}</p><br>
@@ -208,6 +222,8 @@ document.getElementById("rela").innerHTML = rel
    }
 }
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
   
   
@@ -216,6 +232,53 @@ document.addEventListener("DOMContentLoaded", function () {
       if (result.status == "ok") {
        infoit = result.data;
         mostrarInfo (infoit);
+        document.getElementById("btnDir").addEventListener("click", function(){
+        
+          const carrito = JSON.parse(localStorage.getItem("carrito"));
+          
+          
+          
+          if (carrito) {
+            console.log(carrito[dif])
+            if (carrito[dif]) {
+              alert("Este articulo ya esta en tu carrito");
+              return;
+            }
+            localStorage.setItem(
+              "carrito",
+              JSON.stringify({
+                ...carrito,
+                [dif]: {
+                  id : infoit.id, 
+                  name : infoit.name, 
+                  des : infoit.description,
+                  costo : infoit.cost,
+                  mon : infoit.currency,
+                  img : infoit.images
+                },
+              })
+            );} else {
+              localStorage.setItem(
+                "carrito",
+                JSON.stringify({
+                  [dif]: {id : infoit.id, 
+                    name : infoit.name, 
+                    des : infoit.description,
+                    costo : infoit.cost,
+                    mon : infoit.currency,
+                    img : infoit.images
+                   
+                  },
+                })
+              );
+            }
+        
+          
+        
+         
+          window.location = "cart.html"
+        console.log(localStorage.getItem("datos_cart"))
+        })
         
     }else{
         alert("algo salio mal" + result.data);
