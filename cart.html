@@ -9,6 +9,12 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <script>
+    
+    if (localStorage.getItem("datos_ingresados") == null){ 
+      window.location = "index.html"
+    } 
+</script>
 </head>
 
 <body>
@@ -106,7 +112,7 @@
       </div>
       <br>
       <button
-      id="botonform"
+      id="botonComp"
       class="btn btn-primary text-center"
       type="submit"
     >

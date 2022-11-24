@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -24,38 +25,93 @@
       }
     }
   </style>
+  <script>
+    
+      if (localStorage.getItem("datos_ingresados") == null){ 
+        window.location = "index.html"
+      } 
+  </script>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav w-100 justify-content-between">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="categories.html">Categorías</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="sell.html">Vender</a>
-          </li>
-          <li class="nav-item">
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div id="barra">
+
+  </div><br>
   <main>
+    <form   id="form"
+    action="#"
+    method="get"
+    class="needs-validation"
+    novalidate>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
+      <div class="d-flex justify-content-center">
+        
+        <div class="col-md-8">
+           <div id="perfil"></div>
+           <h1>Perfil</h1>
+           <hr>
+           <div class="row">
+         
+            
+            <div class="col-md-6 mb-4">
+              <label for="pname">Primer Nombre*</label>
+              <input type="text" name="" class="form-control" id="pname" placeholder="" required="" 
+                >
+              <div class="invalid-feedback">
+                Debe ingresar un nombre
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              
+                <label for="sname">Segundo Nombre</label>
+                <input type="text" class="form-control" id="sname" value="" name="" >
+               
+                </div>
+                <div class="col-md-6 mb-4">
+                  <label for="papell">Primer apellido*</label>
+                  <input type="text" name="" class="form-control" id="papell" placeholder="" required="" 
+                    >
+                  <div class="invalid-feedback">
+                    Debe ingresar un apellido
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  
+                    <label for="sape">Segundo apellido</label>
+                    <input type="text" class="form-control" id="sape" value="" name="" >
+                   
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <label for="email">E-mail*</label>
+                      <input type="text" name="" class="form-control" id="email" placeholder="" required="" 
+                        >
+                      <div class="invalid-feedback">
+                        Debe ingresar un email
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      
+                        <label for="cel">Teléfono de contacto</label>
+                        <input type="number" class="form-control" id="cel" value="" name="" >
+                       
+                        <br>
+                        <br>
+                        <br>
+                        </div>
+                       
+                        <hr>
+                        <button class="btn btn-primary btn-lg" type="submit" id="botonDatos">Guardar cambios</button>
+
+              
+              
+          </div>
+              
+              
+          <div>
+     </div>
     </div>
+    
+    </form>
   </main>
   <footer class="text-muted">
     <div class="container">
@@ -70,6 +126,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/my-profile.js"></script>
+  <script src="js/Mostrar.js"></script>
 </body>
 
 </html>

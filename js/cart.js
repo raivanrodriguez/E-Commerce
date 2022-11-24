@@ -139,6 +139,12 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         `;
         document.getElementById("formulario").classList.remove("was-validated");
+       
+        
+        document
+        .getElementById("botonComp")
+        .setAttribute("disabled", "true");
+       
         
       } 
       
