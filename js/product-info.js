@@ -127,31 +127,82 @@ function mostrarInfo(infoit) {
 let = contenido = `
 
 <h2>${infoit.name}</h2> 
-<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-<button class="btn btn-success me-md-2" type="button" id="btnDir" >Comprar</button>
+
 </div><br>
 <p class="mb-1">${infoit.description}</p><br>
 
 <hr>
+<div class="row">
+<div class="col-md mb-2 me-3">
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img  src="${infoit.images[0]}" class="d-block w-100 mx-auto">
+      <div  class="carousel-caption d-none d-md-block">
+        
+       
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="10000">
+    <img  src="${infoit.images[1]}" class="d-block w-100 mx-auto">
+    <div  class="carousel-caption d-none d-md-block">
+      
+     
+    </div>
+  </div>
+  <div class="carousel-item" data-bs-interval="10000">
+  <img  src="${infoit.images[2]}" class="d-block w-100 mx-auto">
+  <div  class="carousel-caption d-none d-md-block">
+    
+   
+  </div>
+</div>
+<div class="carousel-item" data-bs-interval="10000">
+<img  src="${infoit.images[3]}" class="d-block w-100 mx-auto">
+<div  class="carousel-caption d-none d-md-block">
+  
+ 
+</div>
+</div>
+
+    
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+<div class="col-md-5 col-sm-9">
 <p ><strong>Precio</strong></p>
 <p class="mb-1">${infoit.currency} ${infoit.cost}</p><br>
 <p ><strong>Categoría</strong></p>
 <p class="mb-1">${infoit.category}</p><br>
 <p ><strong>Cantidad de vendidos</strong></p>
 <p class="mb-1">${infoit.soldCount}</p><br>
+<br>
 
-<div class="row">
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+<button class="btn btn-success me-md-2" type="button" id="btnDir" >Comprar</button>
 
-
-<img src="${infoit.images[0]}"  class="col-3 img-thumbnail">
-<img src="${infoit.images[1]}"  class="col-3 img-thumbnail">
-<img src="${infoit.images[2]}"  class="col-3 img-thumbnail">
-<img src="${infoit.images[3]}"  class="col-3 img-thumbnail">
-
-
+</div>
 
 
 </div>
+
+
 
 `
     document.getElementById("infopro").innerHTML += contenido

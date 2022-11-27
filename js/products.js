@@ -27,8 +27,8 @@ function mostrarItems(itemsr) {
   let contenido = `
   <div  onclick="setCatID(${item.id})" class="list-group-item list-group-item-action cursor-active">
       <div class="row">
-          <div class="col-3">
-              <img src="${item.image}" alt="${item.description}" class="img-thumbnail">
+          <div class="col-lg-3 col-sm-6">
+              <img src="${item.image}" alt="${item.description}" class="img-thumbnail w-100">
           </div>
           <div class="col">
               <div class="d-flex w-100 justify-content-between">

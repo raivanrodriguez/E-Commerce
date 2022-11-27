@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <h5 class="fw-bold" id="offcanvasTopLabel">Bienvenidos al E-commerce de Ceibal</h5>
             <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
-          <div class="offcanvas-body bg-dark text-white p-10">
-            ...
+          <div class="offcanvas-body bg-dark text-white p-200">
+            
           </div>
         </div>
           <li class="nav-item">

@@ -1,8 +1,25 @@
 let perfil = [];
 let usuario = JSON.parse(localStorage.getItem("datos_ingresados"))
+let file1 = document.getElementById("inputFile01")
+
+//funcion que muestra la imagen si hay una cargada y sino mostrara una por default
+function mostrarImagen(){
+  if (localStorage.getItem("imagenPerfil") != null){
+    const imper = localStorage.getItem("imagenPerfil");
+    const img = new Image()
+
+    img.src = imper;
+
+    document.getElementById("imgPer").innerHTML = (`<img src="${img.src}" alt="img" class="im float-end"></img>`)
+  }
+  else{
+    document.getElementById("imgPer").innerHTML = `<img src="img/img_perfil.png" alt="img" class="im float-end"></img>`
+  }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
    
+     mostrarImagen();
 
     if (localStorage.getItem("perfil") == null){document.getElementById("email").value = usuario.dato1}
 
@@ -58,6 +75,23 @@ document.addEventListener("DOMContentLoaded", () => {
           } 
        
       })
+      // desafio imagen
+
       
-    
+      file1.addEventListener("change", () =>{
+
+        const fl = new FileReader();
+
+        fl.readAsDataURL(file1.files[0]);
+        fl.addEventListener("load", () =>{
+         
+          const url = fl.result;
+          localStorage.setItem("imagenPerfil", url)
+
+          
+         mostrarImagen()
+        })
+        
+      })
+     
     })
