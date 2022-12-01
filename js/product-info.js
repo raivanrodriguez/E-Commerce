@@ -96,7 +96,7 @@ function showList() {
           // para que al recorrerlo solo muestre los que el id coincida con el dif que a su vez también es el id del producto
         
           
-      console.log()
+      
           contenedor.innerHTML += `<div class="list-group-item list-group-item-action ">
           <div class="row">
              
@@ -143,28 +143,28 @@ let = contenido = `
     
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
+    <div class="carousel-item active" data-bs-interval="1500">
       <img  src="${infoit.images[0]}" class="d-block w-100 mx-auto">
       <div  class="carousel-caption d-none d-md-block">
         
        
       </div>
     </div>
-    <div class="carousel-item" data-bs-interval="10000">
+    <div class="carousel-item" data-bs-interval="2500">
     <img  src="${infoit.images[1]}" class="d-block w-100 mx-auto">
     <div  class="carousel-caption d-none d-md-block">
       
      
     </div>
   </div>
-  <div class="carousel-item" data-bs-interval="10000">
+  <div class="carousel-item" data-bs-interval="2500">
   <img  src="${infoit.images[2]}" class="d-block w-100 mx-auto">
   <div  class="carousel-caption d-none d-md-block">
     
    
   </div>
 </div>
-<div class="carousel-item" data-bs-interval="10000">
+<div class="carousel-item" data-bs-interval="3000">
 <img  src="${infoit.images[3]}" class="d-block w-100 mx-auto">
 <div  class="carousel-caption d-none d-md-block">
   
@@ -208,21 +208,21 @@ let = contenido = `
     document.getElementById("infopro").innerHTML += contenido
     let rel= 
     `
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+<div id="carouselExample" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
     
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
+    <div class="carousel-item active" data-bs-interval="1700">
       <img onclick="setCatID(${infoit.relatedProducts[0].id})" src="${infoit.relatedProducts[0].image}" class="d-block w-100 cursor-active" alt="${infoit.relatedProducts[0].id}">
       <div  class="carousel-caption d-none d-md-block">
         
        
       </div>
     </div>
-    <div class="carousel-item" data-bs-interval="2000">
+    <div class="carousel-item" data-bs-interval="1700">
       <img onclick="setCatID(${infoit.relatedProducts[1].id})" src="${infoit.relatedProducts[1].image}" class="d-block w-100 cursor-active" alt="${infoit.relatedProducts[1].id}">
       <div class="carousel-caption d-none d-md-block">
 
@@ -230,11 +230,11 @@ let = contenido = `
     </div>
 
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
